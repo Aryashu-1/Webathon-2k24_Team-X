@@ -9,7 +9,8 @@ function Cart({ dishes, onHideCart, totalAmount }) {
       <table className='w-full border-2 border-black'>
         <thead>
           <tr className='flex border-2 border-black flex-row text-center justify-evenly'>
-            <th className='text-2xl justify-start font-bold '>Product Name</th>
+          <th className='text-2xl justify-start font-bold '>Name</th>
+            <th className='text-2xl justify-start font-bold '>Id</th>
             <th className='text-2xl justify-start font-bold'>Quantity</th>
             <th className='text-2xl justify-start font-bold'>Amount</th>
           </tr>
@@ -20,6 +21,7 @@ function Cart({ dishes, onHideCart, totalAmount }) {
     <div key={index}>
       <tr className='flex border-2 border-black flex-row text-center justify-evenly'>
         <td className='text-2xl justify-start flex mx-9 w-80'>{dish.productName}</td>
+        <td className='text-2xl justify-start flex mx-9 w-80'>{dish.index}</td>
         <td className='text-2xl justify-start flex mx-9'>{dish.count}</td>
         <td className='text-2xl justify-start flex mx-9'>{dish.bill}</td>
       </tr>

@@ -40,8 +40,7 @@ function PaymentComponent(props) {
         const {
           data: { key: razorpayKey },
         } = await axios.get(`${BackURL}/api/get-visible-key`);
-
-
+``
         const options = {
           key: razorpayKey,
           amount: amount,

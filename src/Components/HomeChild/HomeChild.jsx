@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const HomeChild = (props) => {
     return (
     <div className=''>
-        <NavLink to={props.data.Title}>
+        <NavLink to={'/Transport'}>
             
 
             <div className="w-[300px]  shadow-rounded overflow-hidden m-9 border-white border-2 border-solid p-6 rounded-xl shadow-xl shadow-sky-300">

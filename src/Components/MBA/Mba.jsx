@@ -14,200 +14,289 @@ function Mba() {
     function calculateBill(){
       let totalBill = 0;
       dishes.map((data,index)=>{
-        totalBill+=data.bill
+        totalBill+=data.price
       })
       setFinalBill(totalBill)
     
     }
 
   const [dishes,setCart] =useState( [
-    { 
-      "productName": "Manchuria",
-      "url": 'https://www.awesomecuisine.com/wp-content/uploads/2018/07/cabbage_manchurian_dry.jpg',
-      "price":50 ,
-      "stock": 100,
-      "count": 0,
-      "bill":0
+    {
+      "vehicleNumber": "MH12 AB 3456",
+      "name": "Mumbai Train (Fast)",
+      "source": "Hyderabad",
+      "destination": "Delhi",
+      "price": 500,
+      "departureTime": "08:00 AM",
+      "timeOfTravel": "12h",
+      "isFull": false,
+      "typeOfTransport": "train"
     },
     {
-      "productName": " Veg Noodles",
-      "url":"https://i1.wp.com/thetwincookingproject.net/wp-content/uploads/2020/05/Hakka-Noodles-11-scaled.jpg?fit=1707%2C2560&ssl=1 ",
-      "price": 35,
-      "stock": 100,
-      "count": 0,
-      "bill":0
+      "vehicleNumber": "9W 1234",
+      "name": "Indigo",
+      "source": "Hyderabad",
+      "destination": "Delhi",
+      "price": 3500,
+      "departureTime": "10:30 AM",
+      "timeOfTravel": "2h 15m",
+      "isFull": true,
+      "typeOfTransport": "flight"
     },
     {
-      "productName": "Egg Noodles",
-      "url": "https://static.toiimg.com/thumb/52467119.cms?width=1200&height=900",
-      "price":40,
-      "stock": 100,
-      "count": 0,
-      "bill":0
+      "vehicleNumber": "GOA12345",
+      "name": "Mumbai Delhi Exp",
+      "source": "Mumbai",
+      "destination": "Delhi",
+      "price": 800,
+      "departureTime": "17:00 PM",
+      "timeOfTravel": "8h 30m",
+      "isFull": false,
+      "typeOfTransport": "train"
     },
     {
-      "productName": "Double Egg Noodles",
-      "url": "https://static.toiimg.com/thumb/52467119.cms?width=1200&height=900",
-      "price": 45,
-      "stock": 100,
-      "count": 0,
-      "bill":0
+      "vehicleNumber": "KL10 12345",
+      "name": "Kerala State Water Transport Department",
+      "source": "Thiruvananthapuram",
+      "destination": "Mumbai",
+      "price": 150,
+      "departureTime": "14:00 PM",
+      "timeOfTravel": "2h",
+      "isFull": false,
+      "typeOfTransport": "ship"
     },
     {
-      "productName": "Fried Rice",
-      "url": "https://www.averiecooks.com/wp-content/uploads/2022/05/beeffriedrice-13-540x720.jpg",
-      "price": 40,
-      "stock": 100,
-      "count": 0,
-      "bill":0
+      "vehicleNumber": "KA 01 C 1234",
+      "name": "Volvo B9R",
+      "source": "Hyderabad",
+      "destination": "Delhi",
+      "price": 1200,
+      "departureTime": "22:00 PM",
+      "timeOfTravel": "10h",
+      "isFull": true,
+      "typeOfTransport": "bus"
     },
     {
-      "productName": "Double Egg Fried Rice",
-      "url": "https://www.averiecooks.com/wp-content/uploads/2022/05/beeffriedrice-13-540x720.jpg",
-      "price": 45,
-      "stock": 100,
-      "count": 0,
-      "bill":0,
+      "vehicleNumber": "MH 46 Y 7890",
+      "name": "Mahindra Tempo Traveller",
+      "source": "Hyderabad",
+      "destination": "Delhi",
+      "pricePerKM": 15,
+      "departureTime": "On Demand",
+      "timeOfTravel": "Varies (Approx. 1h)",
+      "isFull": false,
+      "typeOfTransport": "minibus"
     },
     {
-      "productName": "French Fries",
-      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTedlwcMtg6q95pdawXytV7UMbs8WF5Bn4ZeQ&usqp=CAU",
-      "stock": 100,
-      "price": 25,
-      "count": 0,
-      "bill":0
+      "vehicleNumber": "DL 01 U 1234",
+      "name": "Raju Car Services (Sedan)",
+      "source": "Hyderabad",
+      "destination": "Delhi",
+      "pricePerKM": 22,
+      "departureTime": "On Demand",
+      "timeOfTravel": "Varies (Approx. 10hrs)",
+      "isFull": false,
+      "typeOfTransport": "cabs"
     },
     {
-      "productName": "PeriPeri Fries ",
-      "url": "https://rppizzeria.com/web/image/product.template/121/image_1024?unique=0b2ae4a",
-      "price": 30,
-      "stock": 100,
-      "count": 0,
-      "bill":0
+      "vehicleNumber": "AP 28 BY 4567",
+      "name": "Nexus cabs",
+      "source": "Chennai",
+      "destination": "Hyderabad",
+      "pricePerKM": 20,
+      "departureTime": "On Demand",
+      "timeOfTravel": "Varies (Approx. 6h)",
+      "isFull": false,
+      "typeOfTransport": "cabs"
     },
     {
-      "productName": "KitKat",
-      "url": "https://kumaribasket.com/wp-content/uploads/2020/10/Nestle-Kitkat-Chocolate1.jpg",
-      "price": 25,
-      "stock": 100,
-      "count":0,
-      "bill":0
+      "vehicleNumber": "TN 07 N 9876",
+      "name": "",
+      "source": "Chennai",
+      "destination": "Mumbai",
+      "price": 60,
+      "departureTime": "11:00 AM",
+      "timeOfTravel": "5h",
+      "isFull": false,
+      "typeOfTransport": "train"
     },
     {
-      "productName": "MunchMax",
-      "url": "https://static.wixstatic.com/media/057d74_b1eaf4b1fd8d4648a1abc96ff0edc024~mv2.jpeg/v1/fill/w_480,h_254,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/057d74_b1eaf4b1fd8d4648a1abc96ff0edc024~mv2.jpeg",
-      "price": 30,
-      "stock": 100,
-      "count":0,
-      "bill":0
+      "vehicleNumber": "HR 26 AB 1234",
+      "name": "Shatabdi Express",
+      "source": "Chennai",
+      "destination": "Delhi",
+      "price": 1200,
+      "departureTime": "07:30 AM",
+      "timeOfTravel": "23h",
+      "isFull": false,
+      "typeOfTransport": "train"
     },
     {
-      "productName": "Milkybar",
-      "url": "https://frugivore-storage.s3.amazonaws.com/media/package/img_one/2020-07-31/Nestle_Milkybar_25gm.jpg",
+      "vehicleNumber": "GJ 01 G 5678",
+      "name": "Ro-Pax Ferry",
+      "source": "Mumbai",
+      "destination": "Chennai",
+      "price": 450,
+      "departureTime": "13:00 PM",
+      "timeOfTravel": "14h",
+      "isFull": false,
+      "typeOfTransport": "ship"
+    },
+    {
+      "vehicleNumber": "KL 09 Z 4321",
+      "name": "Houseboat (Alleppey Backwaters)",
+      "source": "Kochi",
+      "destination": "Thiruvananthapuram",
+      "price": 3000,
+      "departureTime": "5:00 PM",
+      "timeOfTravel": "Varies",
+      "isFull": false,
+      "typeOfTransport": "ship"
+    },
+    {
+      "vehicleNumber": "PB 06 C 9876",
+      "name": "Volvo Multi Axle AC Sleeper Coach (Amritsar - Delhi)",
+      "source": "Hyderabad",
+      "destination": "Tirupati",
+      "price": 1500,
+      "departureTime": "20:30 PM",
+      "timeOfTravel": "8h",
+      "isFull": false,
+      "typeOfTransport": "bus"
+    },
+    {
+      "vehicleNumber": "RJ 14 F 1234",
+      "name": "Non-AC Mini Bus",
+      "source": "Hyderabad",
+      "destination": "Panaji",
       "price": 20,
-      "stock": 100,
-      "count":0,
-      "bill":0
+      "departureTime": "6:00 AM",
+      "timeOfTravel": "6h",
+      "isFull": false,
+      "typeOfTransport": "bus"
     },
     {
-      "productName": "Perk",
-      "url": "https://5.imimg.com/data5/JT/KY/MY-36741304/perk-chocolate.jpg",
-      "price": 15,
-      "stock": 100,
-      "count":0,
-      "bill":0
+      "vehicleNumber": "GA 09 U 7890",
+      "name": "Force Traveller",
+      "source": "Hyderabad",
+      "destination": "Panaji",
+      "pricePerKM": 18,
+      "departureTime": "On Demand",
+      "timeOfTravel": "Varies (Approx. 45m)",
+      "isFull": false,
+      "typeOfTransport": "minibus"
     },
     {
-      "productName": "Bounty",
-      "url": "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61hjQuBjRoL.jpg",
-      "price": 30,
-      "stock": 100,
-      "count":0,
-      "bill":0
+      "vehicleNumber": "MP 04 Z 5678",
+      "name": "Uberiman (Micro)",
+      "source": "Hyderabad",
+      "destination": "Jammu",
+      "pricePerKM": 15,
+      "departureTime": "On Demand",
+      "timeOfTravel": "Varies (Approx. 30h)",
+      "isFull": false,
+      "typeOfTransport": "cabs"
     },
     {
-      "productName": "Mars",
-      "url": "https://fetchnbuy.in/cdn/shop/products/MARS_Chocolate_Bar_42gr-700x700_grande.webp?v=1646032438",
-      "price": 25,
-      "stock": 100,
-      "count":0,
-      "bill":0
+      "vehicleNumber": "AS 01 Y 3456",
+      "name": "Sai Ram Bus Services",
+      "source": "Hyderabad",
+      "destination": "Delhi",
+      "pricePerKM": 10,
+      "departureTime": "On Demand",
+      "timeOfTravel": "Varies",
+      "isFull" : false,
+      "typeOfTransport": "minibus"
     },
     {
-      "productName": "Cococola",
-      "url": "",
-      "price": 20,
-      "stock": 100,
-      "count":0,
-      "bill":0
+      "vehicleNumber": "Y 3456",
+      "name": "Spicejet",
+      "source": "Hyderabad",
+      "destination": "Delhi",
+      "price": 10000,
+      "departureTime": "6:00 AM",
+      "timeOfTravel": "2h",
+      "isFull" : false,
+      "typeOfTransport": "flight"
     },
     {
-      "productName": "Pepsi",
-      "url": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=1080/app/images/products/sliding_image/283a.jpg?ts=1689327540",
-      "price": 15,
-      "stock": 100,
-      "count":0,
-      "bill":0
+      "vehicleNumber": "Y 3456",
+      "name": "Spicejet",
+      "source": "Hyderabad",
+      "destination": "Delhi",
+      "price": 10000,
+      "departureTime": "6:00 AM",
+      "timeOfTravel": "2h",
+      "isFull": false,
+      "typeOfTransport": "flight"
     },
     {
-      "productName": "Milkshake",
-      "url": "https://5.imimg.com/data5/HE/DC/MY-6849189/milkshake.jpg",
-      "price": 25,
-      "stock": 100,
-      "count":0,
-      "bill":0
+      "vehicleNumber": "AP 19 Z 7890",
+      "name": "Air India",
+      "source": "Hyderabad",
+      "destination": "Delhi",
+      "price": 8500,
+      "departureTime": "12:00 PM",
+      "timeOfTravel": "2h 15m",
+      "isFull": true,
+      "typeOfTransport": "flight"
     },
     {
-      "productName": "Sprite",
-      "url": "https://m.media-amazon.com/images/I/61slsTqQruL.jpg",
-      "price": 10,
-      "stock": 100,
-      "count":0,
-      "bill":0
+      "vehicleNumber": "KA 26 Y 4321",
+      "name": "Deccan Express (Hyderabad - Delhi)",
+      "source": "Hyderabad",
+      "destination": "Delhi",
+      "price": 700,
+      "departureTime": "18:30 PM",
+      "timeOfTravel": "16h",
+      "isFull": false,
+      "typeOfTransport": "train"
     },
     {
-      "productName": "Fanta",
-      "url": "https://www.grocebox.in/wp-content/uploads/2023/01/Fanta-Orange-Flavoured-Soft-Drink-2L.jpg",
-      "price": 30,
-      "stock": 100,
-      "count":0,
-      "bill":0
+      "vehicleNumber": "MH 09 U 1234",
+      "name": "Nizamuddin Express (Hyderabad - Delhi)",
+      "source": "Hyderabad",
+      "destination": "Delhi",
+      "price": 950,
+      "departureTime": "09:15 AM",
+      "timeOfTravel": "14h 30m",
+      "isFull": false,
+      "typeOfTransport": "train"
     },
     {
-      "productName": "Ice Cream",
-      "url": "https://qph.cf2.quoracdn.net/main-qimg-1b2d16ee5f2118d3d85675dea618fe3e.webp",
-      "price": 35,
-      "stock": 100,
-      "count":0,
-      "bill":0
+      "vehicleNumber": "HR 14 AB 5678",
+      "name": "Rajdhani Express (Hyderabad - Delhi)",
+      "source": "Hyderabad",
+      "destination": "Delhi",
+      "price": 1500,
+      "departureTime": "23:00 PM",
+      "timeOfTravel": "11h",
+      "isFull": false,
+      "typeOfTransport": "train"
     },
     {
-      "productName": "Kulfi",
-      "url": "https://www.archanaskitchen.com/images/archanaskitchen/Indian_Sweets_Mithai/Kesar_Pista_Kulfi_Recipe_Indian_Ice_Cream-1-2_400.jpg",
-      "price": 30,
-      "stock": 100,
-      "count":0,
-      "bill":0
+      "vehicleNumber": "TN 04 XY 3456",
+      "name": "Volvo Multi Axle AC Sleeper (Hyderabad - Delhi)",
+      "source": "Hyderabad",
+      "destination": "Delhi",
+      "price": 1800,
+      "departureTime": "20:00 PM",
+      "timeOfTravel": "9h",
+      "isFull": true,
+      "typeOfTransport": "bus"
     },
     {
-      "productName": "Cassata",
-      "url": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=900/app/images/products/sliding_image/519996a.jpg",
-      "price": 25,
-      "stock": 100,
-      "count":0,
-      "bill":0
-    },
-    {
-      "productName": "Badam Milk",
-      "url": "https://www.bigbasket.com/media/uploads/p/l/20003886_4-godrej-jersey-flavoured-milk-badam.jpg",
-      "price": 15,
-      "stock": 100,
-      "count":0,
-      "bill":0
-    }
-  
-
-  ])
+      "vehicleNumber": "KL 56 C 9876",
+      "name": "RK Travels (Hyderabad - Delhi)",
+      "source": "Hyderabad",
+      "destination": "Delhi",
+      "pricePerKM": 17,
+      "departureTime": "On Demand",
+      "timeOfTravel": "Varies (Approx. 12h)",
+      "isFull": false,
+      "typeOfTransport": "bus"
+    }       
+])
 
     function incrementDishCount(index){
 

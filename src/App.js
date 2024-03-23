@@ -19,6 +19,8 @@ import Home from "./Components/Home/Home";
 import Cart from "./Components/Cart/Cart";
 import AdminComponent from "./Components/AdminComponent/AdminComponent";
 import ConfirmDelivery from "./Components/ConfirmDelivery/ConfirmDelivery";
+import Homea from "./Components/Homea/Homea";
+import Hotels from "./Components/Hotels/Hotels";
 
 function App() {
   let router = createBrowserRouter([
@@ -28,14 +30,22 @@ function App() {
       children: [
         {
           path:'',
+          element:<Homea/>
+        },
+        {
+          path:'/Home',
           element:<Home/>
+        },
+        {
+          path:'/Hotels',
+          element:<Hotels/>
         },
         {
           path: "/admin",
           element: <AdminComponent />
         },
         {
-          path: "Annapurna",
+          path: "/Transport",
           element: <Annapurna />,
         },
         {
@@ -43,7 +53,7 @@ function App() {
           element: <Cart/>,
         },
         {
-          path: "MBA",
+          path: "/das",
           element: <Mba />,
           
         },
